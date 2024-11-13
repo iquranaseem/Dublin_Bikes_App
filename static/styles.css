@@ -1,0 +1,331 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* General */
+body {
+  margin: 0;
+  font-family: 'Chivo', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 80%;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+ }
+
+button {
+  font-size: 0.8rem;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+/* Header */
+header {
+  background-color: #000000; /* change background color to black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ffffff; /* change text color to white */
+}
+
+/* .main-content */
+.main-content {
+  display: flex;
+  margin-top: 0;
+}
+
+/*  .left-section */
+.left-section {
+  flex: 1;
+  padding-right: 5px;
+  box-sizing: border-box;
+  max-width: calc(100% - 520px);
+}
+
+.prediction-graph {
+  align-items: center;
+  width: 500px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Update the #map rule */
+#map {
+  width: calc(100% - 40px);
+  height: calc(870px); 
+  margin: 20px;
+  border: 3px solid #333;
+  border-radius: 5px;
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.info-section:last-child {
+  margin-bottom: 0;
+}
+
+
+.info-section > div {
+  width: calc(100% / 3 - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.info-section > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.info-section > div:last-child {
+  margin-right: 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .info-section > div {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Search Bar and Buttons */
+
+#search-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+#search-input {
+  padding: 8px;
+  width: 320px;
+  border: 3px solid #333;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+
+#search-input:focus {
+  border-color: #333; 
+  outline: none;
+}
+#stations-dropdown {
+  display: none;
+  position: absolute;
+  width: 320px;
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#stations-dropdown .station {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#stations-dropdown .station:hover {
+  background-color: #f1f1f1;
+}
+
+.buttons-container {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.buttons-container button:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+/* Station and Weather Info */
+#station-info,
+#weather-info {
+  background-color: #f1f1f1;
+  padding: 5px 5px 5px 10px; /* top right bottom left */
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+
+  border: 3px solid #333;
+}
+
+#weather-info {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#station-info {
+  height: 250px; 
+ 
+  
+}
+
+
+#occupancy-info {
+  height: 320px; 
+
+  border: 3px solid #333;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+/* Google Maps Info Window */
+.gm-style-iw-d {
+  overflow: hidden !important;
+}
+
+.gm-style-iw-d > div {
+  background-color: #f1f1f1 !important;
+  padding: 10px !important;
+  border-radius: 5px !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/*  .main-content */
+.main-content {
+  display: flex;
+  height: 100vh;
+}
+
+/*  .left-section */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  height: 100vh;
+
+  box-sizing: border-box;
+}
+
+/*  .info-container */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar button {
+  font-size: 0.8rem;
+  background-color: #333;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  height: 42px;
+  width: 180px;
+}
+
+.toolbar button:hover {
+  background-color: #777;
+}
+
+/*#weather-info p {
+  margin: 3px 0;
+  line-height: 1.2;
+}
+
+#weather-info h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}*/
+
+button,
+#search-input::placeholder,
+#stations-dropdown .station {
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.gm-style-iw-d > div {
+  font-family: 'Chivo', sans-serif;
+}
+
+.small-text {
+  font-size: 0.8rem; 
+}
+
+#legend h3 {
+        text-align: center;
+        margin: 0;
+      }

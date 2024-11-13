@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dublin Bikes App</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <script src="/static/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Chivo:300,700" rel="stylesheet">
+      </head>
+  <body>
+    <header>
+      <h1>Dublin Bike Application</h1>
+    </header>
+    <div class="toolbar">
+      <button id="restore-basic-view">Restore Basic View</button>
+      <button id="toggle-heatmap">Toggle Bike Heatmap</button>
+      <button id="toggle-available-stations">Toggle Stations with Available Bikes</button>
+      <button id="toggle-available-stands">Toggle Stations with Available Stands</button>
+      <button id="show-walking-distance" class="custom-button">Show 5 Closest Stations</button>
+    </div>
+    <div class="main-content">
+      <div class="left-section">
+        <div id="search-container">
+          <input type="text" id="search-input" placeholder="Search for a station">
+          <div id="stations-dropdown" class="dropdown"></div>
+        </div>
+        <div class="buttons-container">
+        </div>
+        <div class="info-container">
+          <div class="info-section" id="weather-info">
+            <h2>Weather information</h2>
+          </div>
+          <div class="info-section" id="occupancy-info">
+            <h2>Click on a station marker to display the prediction graphs</h2>
+          </div>
+          <div class="info-section" id="station-info">
+            <h2>Click on a station marker to display station information or get directions</h2>
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+  </body>
+</html>
